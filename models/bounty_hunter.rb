@@ -30,7 +30,7 @@ class BountyHunter
 
   def delete
     db = PG.connect( {dbname: 'bounty_hunter', host: 'localhost'} )
-    sql = "DELETE FROM bounty_hunter WHERE id = #{id};"
+    sql = "DELETE FROM bounty_hunter WHERE id = #{@id}"
     db.exec(sql)
     db.close
   end
